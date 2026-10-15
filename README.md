@@ -48,12 +48,5 @@ py -3 src/cli.py shorten https://example.com/some/long/link
 py -3 src/cli.py resolve a1b2c3
 ```
 
-## Done? Push it to GitHub
-
-See `PUSH-TO-GITHUB.md`. The repo is already a local git repo with your first commit made for you.
-
-## The 30-day pact
-
-When you finish, open `METRICS.md` and commit to the two workflows you will actually repeat, the one metric that proves faster (not feels-faster), and the one person who owns the playbook.
 
 The honest question to leave with: **is this actually faster, or does it just feel faster?**
