@@ -7,6 +7,7 @@ exercise. Read CLAUDE.md first, then use the Coding prompt in PROMPTS.md.
 
 import json
 import os
+import random
 import string
 
 CODE_ALPHABET = string.ascii_lowercase + string.digits
@@ -40,28 +41,36 @@ def save_store(path, store):
 def is_valid_url(url):
     """Return True if `url` is a non-empty string starting with http:// or https://.
 
-    TODO (Coding stage): implement this. See the acceptance criteria in README.
+    Never raises; any invalid input simply returns False.
     """
-    raise NotImplementedError("Implement is_valid_url - see README and PROMPTS.md")
+    if not isinstance(url, str):
+        return False
+    url = url.strip()
+    return url.startswith("http://") or url.startswith("https://")
 
 
 def shorten(url, store):
     """Return a short code for `url`, registering it in `store`.
 
-    - Reuse the existing code if this exact URL was already shortened.
-    - Otherwise generate a new 6-char code from CODE_ALPHABET that is not already used.
-    - Raise ValueError if `url` is not a valid URL.
-
-    TODO (Coding stage): implement this.
+    Reuses the existing code if this exact URL was already shortened; otherwise
+    generates a new CODE_LENGTH-char code from CODE_ALPHABET that is not already
+    used. Raises ValueError if `url` is not a valid URL.
     """
-    raise NotImplementedError("Implement shorten - see README and PROMPTS.md")
+    if not is_valid_url(url):
+        raise ValueError(f"not a valid URL: {url!r}")
+    for code, existing in store.items():
+        if existing == url:
+            return code
+    while True:
+        code = "".join(random.choices(CODE_ALPHABET, k=CODE_LENGTH))
+        if code not in store:
+            break
+    store[code] = url
+    return code
 
 
 def resolve(code, store):
-    """Return the original URL for `code`.
-
-    Raise KeyError if the code is unknown.
-
-    TODO (Coding stage): implement this.
-    """
-    raise NotImplementedError("Implement resolve - see README and PROMPTS.md")
+    """Return the original URL for `code`. Raises KeyError if the code is unknown."""
+    if code not in store:
+        raise KeyError(code)
+    return store[code]
