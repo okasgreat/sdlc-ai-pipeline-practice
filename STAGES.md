@@ -26,9 +26,9 @@ Tick each box as you finish it. Run the Leverage Loop (Context -> Constrain -> G
 - [x] Fixed it; the test now passes (urlparse requires a real host)
 
 ## Stage 5 - Deployment
-- [ ] `PR.md` written (summary, risk, rollback, test evidence)
-- [ ] Nothing that needs a human was left unflagged
-- [ ] Pushed to GitHub (see PUSH-TO-GITHUB.md)
+- [x] `PR.md` written (summary, risk, rollback, test evidence)
+- [x] Nothing that needs a human was left unflagged
+- [x] Pushed to GitHub (see PUSH-TO-GITHUB.md)
 
 ## After
-- [ ] Filled in METRICS.md and committed to the 30-day pact
+- [ ] Filled in METRICS.md and committed to the 30-day pact  <- your turn, Sir Great
