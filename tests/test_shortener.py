@@ -34,6 +34,13 @@ def test_valid_url_rejects_bad_input():
         assert is_valid_url(bad) is False
 
 
+def test_valid_url_rejects_scheme_without_host():
+    # Regression (Stage 4): a scheme with no host slipped through the naive
+    # startswith check and got shortened into junk. Must be rejected.
+    for bad in ["http://", "https://", "https://   "]:
+        assert is_valid_url(bad) is False
+
+
 # ----- ENG-02: shorten -----
 def test_shorten_returns_six_char_code_from_alphabet():
     code = shorten("https://example.com/x", {})

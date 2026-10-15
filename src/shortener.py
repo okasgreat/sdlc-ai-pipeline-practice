@@ -9,6 +9,7 @@ import json
 import os
 import random
 import string
+from urllib.parse import urlparse
 
 CODE_ALPHABET = string.ascii_lowercase + string.digits
 CODE_LENGTH = 6
@@ -45,8 +46,8 @@ def is_valid_url(url):
     """
     if not isinstance(url, str):
         return False
-    url = url.strip()
-    return url.startswith("http://") or url.startswith("https://")
+    parsed = urlparse(url.strip())
+    return parsed.scheme in ("http", "https") and bool(parsed.netloc)
 
 
 def shorten(url, store):

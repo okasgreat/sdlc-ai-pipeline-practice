@@ -21,9 +21,9 @@ Tick each box as you finish it. Run the Leverage Loop (Context -> Constrain -> G
 - [x] `py -3 -m pytest -q` is green (9 passed)
 
 ## Stage 4 - Debugging
-- [ ] Reproduced one real bug as a failing test
-- [ ] Read the actual error before guessing a fix
-- [ ] Fixed it; the test now passes
+- [x] Reproduced one real bug as a failing test (scheme with no host, e.g. "https://", slipped through)
+- [x] Read the actual error before guessing a fix
+- [x] Fixed it; the test now passes (urlparse requires a real host)
 
 ## Stage 5 - Deployment
 - [ ] `PR.md` written (summary, risk, rollback, test evidence)
