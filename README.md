@@ -30,7 +30,7 @@ Starter stubs are in `src/`. They raise `NotImplementedError` on purpose. **That
 
 Do them in order. Use the matching prompt from `PROMPTS.md`. Tick the boxes in `STAGES.md` as you go.
 
-| Stage | You produce | Tool from class |
+| Stage | You produce | Tools |
 |---|---|---|
 | 1. Planning | A short spec / ticket for the next piece of work | Linear / Jira MCP (optional) |
 | 2. Coding | `shorten()` and `resolve()` implemented to spec | Cursor (steer) or Claude Code (drive) |
