@@ -3,8 +3,8 @@
 Tick each box as you finish it. Run the Leverage Loop (Context -> Constrain -> Generate -> Verify) every time.
 
 ## Stage 1 - Planning
-- [ ] Read CLAUDE.md with your AI
-- [ ] Broke the work into small tickets (smallest first)
+- [x] Read CLAUDE.md with your AI
+- [x] Broke the work into small tickets (smallest first) -> see TICKETS.md
 - [ ] (Optional) connected Linear/Jira via MCP
 
 ## Stage 2 - Coding
