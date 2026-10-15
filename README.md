@@ -15,7 +15,7 @@ Built from the Outskill masterclass "Manage Your SDLC Pipeline with AI". The goa
 
 ## What you are building
 
-A tiny **URL shortener** (like the getowl.ai demo from class). No web framework, no database, pure Python plus a JSON file. Small enough to finish one stage per sitting.
+A tiny **URL shortener** (like the getowl.ai demo). No web framework, no database, pure Python plus a JSON file. Small enough to finish one stage per sitting.
 
 It should:
 - Take a long URL and return a short code (e.g. `https://example.com/very/long` -> `a1b2c3`).
